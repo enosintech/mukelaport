@@ -16,6 +16,10 @@
     }
 }
 
+.html, body {
+    height: 100%;
+}
+
 .forshow {
     opacity: 0;
     filter: blur(5px);

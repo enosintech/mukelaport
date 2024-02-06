@@ -35,8 +35,6 @@ const About = () => {
         },
       ];
 
-      const hiddenElements = document.querySelectorAll(".forshow");
-
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if(entry.isIntersecting){
@@ -48,12 +46,13 @@ const About = () => {
       });
 
       useEffect(() => {
+        const hiddenElements = document.querySelectorAll(".forshow");
         hiddenElements.forEach((el) => observer.observe(el));
 
         return () => {
           hiddenElements.forEach((el) => observer.unobserve(el));
         }
-      }, [hiddenElements])
+      }, [])
   
 
     return (
